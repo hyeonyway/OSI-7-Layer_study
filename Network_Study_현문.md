@@ -47,17 +47,17 @@ inflearn '널널한 개발자' '외워서 끝내는 네트워크 핵심이론 - 
 ## Layer와 Layered 구조
 - 계층적 구조
 
-![sec_0_layer.png](./Network_Hyeon/img/sec_0_layer.png)
+![sec_0_layer.png](./img/sec_0_layer.png)
 
 ## 네트워크와 네트워킹
 Network : 관계
 Networking : 상호작용
 
-![sec_0_network.png](./Network_Hyeon/img/sec_0_network.png)
+![sec_0_network.png](./img/sec_0_network.png)
 
 ## User mode와 Kernel mode
 
-![sec_0_mode.png](./Network_Hyeon/img/sec_0_mode.png)
+![sec_0_mode.png](./img/sec_0_mode.png)
 
 # Sec 1. Internet 기반 네트워크 입문
 
@@ -65,7 +65,7 @@ Networking : 상호작용
 
 - OSI 7 layer
 
-![sec_1_osi7layer.png](./Network_Hyeon/img/sec_1_osi7layer.png)
+![sec_1_osi7layer.png](./img/sec_1_osi7layer.png)
 
 식별자
   - L2(Ethernet)
@@ -86,7 +86,7 @@ Switch
 End-point
   - 네트워크 인프라를 이용하는 이용 주체(=단말기)
 
-![sec_1_Host.png](./Network_Hyeon/img/sec_1_Host.png)
+![sec_1_Host.png](./img/sec_1_Host.png)
 
 ## 스위치가 하는 일과 비용
 
@@ -122,17 +122,17 @@ L2 Access Switch
   - End-point와 직접 연결되는 스위치
   - MAC 주소를 근거로 스위칭
 
-![sec_2_L2_Access_switch.png](./Network_Hyeon/img/sec_2_L2_Access_switch.png)
+![sec_2_L2_Access_switch.png](./img/sec_2_L2_Access_switch.png)
 
 L2 Distribution Switch
   - 쉽게 생각하면 L2 Access Switch를 위한 Switch
   - VLAN 기능을 제공하는 것이 일반적
 
-![sec_2_L2_Distribution_switch.png](./Network_Hyeon/img/sec_2_L2_Distribution_switch.png)
+![sec_2_L2_Distribution_switch.png](./img/sec_2_L2_Distribution_switch.png)
 
 ## LAN과 WAN의 경계 그리고 Broadcast
 
-![sec_2_LANWAN.jpg](./Network_Hyeon/img/sec_2_LANWAN.jpg)
+![sec_2_LANWAN.jpg](./img/sec_2_LANWAN.jpg)
 
 Broadcasting
   - 송신 호스트가 전송한 데이터가 네트워크에 연결된 모든 호스트에 전송되는 방식을 의미한다.(위키백과)
@@ -148,7 +148,7 @@ Broadcasting
 - 32bits
 - 인터넷은 Network ID, Host ID 이 둘을 나눠서 생각한다.
 
-![sec_3_ipv4.jpg](./Network_Hyeon/img/sec_3_ipv4.jpg)
+![sec_3_ipv4.jpg](./img/sec_3_ipv4.jpg)
 
 ## L3 IP Packet으로 외워라
 
@@ -156,7 +156,7 @@ L3의 단위 데이터 : Packet
 - Header와 Payload로 나뉜다.(서로 상대적)
 - 최대 크기는 MTU(Maximum Transmission Unit, 1500bytes)
 
-![sec_3_packet.jpg](./Network_Hyeon/img/sec_3_packet.jpg)
+![sec_3_packet.jpg](./img/sec_3_packet.jpg)
 
 ## Encapsulation과 Decapsulation
 
@@ -164,7 +164,7 @@ Encapsulation
   - Data를 담아서 포장
     - 내용물을 알 수 없으므로 보안성 향상
 
-![sec_3_Encap.jpg](./Network_Hyeon/img/sec_3_Encap.jpg)
+![sec_3_Encap.jpg](./img/sec_3_Encap.jpg)
 
 Decapsulation
   - Encapsulation의 반대
@@ -176,7 +176,7 @@ Decapsulation
 - L3에서 IP Header가 붙고 L2에서 Frame Header가 붙음
 - 이더넷 Frame인 채로 나가서 L2 Access Swtich를 만나고 라우터(게이트웨이)를 타고 인터넷으로 나감
 
-![sec_3_packet_cre_sen.jpg](./Network_Hyeon/img/sec_3_packet_cre_sen.jpg)
+![sec_3_packet_cre_sen.jpg](./img/sec_3_packet_cre_sen.jpg)
 
 ## 계층별 데이터 단위
 
@@ -211,7 +211,7 @@ Network 장애
 
 ## IP 헤더 형식
 
-![sec_3_ipheader.png](./Network_Hyeon/img/sec_3_ipheader.png)
+![sec_3_ipheader.png](./img/sec_3_ipheader.png)
 
 - Version : IPv4를 쓰면 0100(4) IPv6를 쓰면 0110(6)
 - IHL : IP Header Length, IP Header의 길이를 4bytes 단위로 나타낸다.(ex. 5 * 4bytes = 20bytes)
@@ -275,7 +275,7 @@ TTL
 - MTU 크기 차이로 발생
 - 보통 단편편의 조립은 수신 측 Host에서 이루어진다.
 
-![sec_3_fragmentation.jpg](./Network_Hyeon/img/sec_3_fragmentation.jpg)
+![sec_3_fragmentation.jpg](./img/sec_3_fragmentation.jpg)
 
 __단편화는 일어나지 않는 것이 좋다__
 - 처음부터 작은 MTU 사이즈에 맞추는 것이 좋음
@@ -295,7 +295,7 @@ DHCP
 - 복잡한 인터넷 설정을 자동으로 해준다고 볼 수 있는데 핵심은 내가 사용할 IP주소를 서버가 알려준다는 것에 있다.
 - Host에서 Broadcasting 방식으로 DHCP Server를 찾고 DHCP Server는 IP주소 등을 응답해준다.
 
-![sec_3_dhcp.jpg](./Network_Hyeon/img/sec_3_dhcp.jpg)
+![sec_3_dhcp.jpg](./img/sec_3_dhcp.jpg)
 
 # ARP
 
@@ -304,7 +304,7 @@ ARP(Address Resolution Protocol)
 - 보통의 경우 PC를 부팅하면 Gateway의 MAC주소를 찾아내기 위해 ARP Req.가 발생하며   
 이에 대응하는 Reply로 MAC 주소를 알 수 있다.
 
-![sec_3_arp.jpg](./Network_Hyeon/img/sec_3_arp.jpg)
+![sec_3_arp.jpg](./img/sec_3_arp.jpg)
 
 - Naver에 접속하려면 GW를 들려야 하고, 이를 위해 GW MAC주소가 필요하므로 ARP를 이용해 알아낸다.
 - 한 번 MAC주소를 구한 뒤엔 Host가 주소를 Cache로 보관한다. (ARP -a 명령어로 확인 가능)
@@ -327,13 +327,13 @@ RTT
 - 연결은 '상태(전이)' 개념을 동반한다.
 - TCP는 수신 못하면 송신하지 않고, UDP는 수신에 상관없이 송신한다.
 
-![sec_4_tcpudp.jpg](./Network_Hyeon/img/sec_4_tcpudp.jpg)
+![sec_4_tcpudp.jpg](./img/sec_4_tcpudp.jpg)
 
 # TCP 연결 과정
 
 3-way handshaking
 
-![sec_4_3way.jpg](./Network_Hyeon/img/sec_4_3way.jpg)
+![sec_4_3way.jpg](./img/sec_4_3way.jpg)
 
 TCP 연결
 - Seq 번호 교환 + 정책 교환(MSS)
@@ -348,22 +348,22 @@ TCP 연결
 
 4-way handshaking
 
-![sec_4_4way.jpg](./Network_Hyeon/img/sec_4_4way.jpg)
+![sec_4_4way.jpg](./img/sec_4_4way.jpg)
 
 - TIME_WAIT = 연결 해제
   - 연결의 시작과 종료는 Client가 요청, Server가 요청 시 문제가 있는 것
 
 TCP (연결) 상태 변화
 
-![sec_4_tcpstate.jpg](./Network_Hyeon/img/sec_4_tcpstate.jpg)
+![sec_4_tcpstate.jpg](./img/sec_4_tcpstate.jpg)
 
 # TCP, UDP 헤더 형식
 
 TCP 헤더 형식
-![sec_4_tcpheader.jpg](./Network_Hyeon/img/sec_4_tcpheader.jpg)
+![sec_4_tcpheader.jpg](./img/sec_4_tcpheader.jpg)
 
 UDP 헤더 형식
-![sec_4_udpheader.jpg](./Network_Hyeon/img/sec_4_udpheader.jpg)
+![sec_4_udpheader.jpg](./img/sec_4_udpheader.jpg)
 
 UDP 활용 - 게임서버
 - TCP는 Client를 배려해 하나가 느리면 모두 하향 평준화   
